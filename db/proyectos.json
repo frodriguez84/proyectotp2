@@ -1,20 +1,102 @@
 [
   {
     "id": 1,
-    "nombre": "Mario Bros",
-    "genero": "Accion",
-    "montoRequerido": 900
+    "nombre": "gta",
+    "genero": "accion"
   },
   {
     "id": 2,
-    "nombre": "Doom",
-    "genero": "Estrategia",
-    "montoRequerido": 700
+    "nombre": "fifa",
+    "genero": "deporte"
   },
   {
     "id": 3,
-    "nombre": "Tetris",
-    "genero": "Indie",
-    "montoRequerido": 200
+    "nombre": "wwe",
+    "genero": "deporte"
+  },
+  {
+    "id": 4,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 5,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 6,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 7,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 8,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 9,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 10,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 11,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 12,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 13,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 14,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 15,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 16,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 17,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 18,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 19,
+    "nombre": "asdf",
+    "genero": "jklj"
+  },
+  {
+    "id": 20,
+    "nombre": "asdf",
+    "genero": "jklj"
   }
 ]
