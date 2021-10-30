@@ -3,6 +3,7 @@ import { crearProyecto } from '../casosDeUso/altaDeProyecto.js'
 import { modificarMonto } from '../casosDeUso/modificarMonto.js'
 import { modificarNombre } from '../casosDeUso/modificarNombre.js'
 import { getDao } from '../daos/DaoFactory.js'
+import fs from 'fs'
 
 const daoProyectos = getDao()
 
