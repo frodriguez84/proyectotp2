@@ -30,8 +30,9 @@ routerProyectos.patch('/:idProyecto', async (req, res) => {
 })
 
 routerProyectos.get('/', async (req, res)=>{
-    
-    res.send('hola')
+    const txt = await fs.promises.readFile('./db/proyectos.json', 'utf-8')
+    const proyectos = JSON.parse(txt)
+    res.json(proyectos)
 })
 
 export { routerProyectos }
