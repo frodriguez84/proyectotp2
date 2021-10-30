@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mario Bros",
+    "genero": "Accion",
+    "montoRequerido": 900
+  },
+  {
+    "id": 2,
+    "nombre": "Doom",
+    "genero": "Estrategia",
+    "montoRequerido": 700
+  },
+  {
+    "id": 3,
+    "nombre": "Tetris",
+    "genero": "Indie",
+    "montoRequerido": 200
+  }
+]
