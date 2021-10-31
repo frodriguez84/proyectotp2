@@ -1,7 +1,6 @@
 import { Router } from 'express'
 import { crearProyecto } from '../casosDeUso/altaDeProyecto.js'
-import { modificarMonto } from '../casosDeUso/modificarMonto.js'
-import { modificarNombre } from '../casosDeUso/modificarNombre.js'
+import { modificarProyecto } from '../casosDeUso/modificarProyecto.js'
 import { getDao } from '../daos/DaoFactory.js'
 import fs from 'fs'
 
@@ -20,10 +19,11 @@ routerProyectos.post('/', async (req, res) => {
 })
 
 routerProyectos.patch('/:idProyecto', async (req, res) => {
-    const { nombre } = req.body
+    const [ [campo, valor] ] = Object.entries(req.body)
+
     const { idProyecto } = req.params
     try {
-        const modificada = await modificarNombre(daoProyectos, idProyecto, nombre)
+        const modificada = await modificarProyecto(daoProyectos, idProyecto, campo, valor)
         res.json(modificada)
     } catch (error) {
         res.json({ error: 'no se pudo modificar' })

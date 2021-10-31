@@ -15,18 +15,25 @@ await client.connect()
 
 const dbProyectos = client.db("ort_tp2").collection("proyectos");
 
+
 console.log('me conecte')
 
-const proyecto = {
+/* const proyecto = {
     'nombre': 'LOL',
     'genero': 'RPG',
     'montoRequerido': 2500
 }
-const resultado = await dbProyectos.insertOne(proyecto)
 
-console.log(resultado)
-console.log(proyecto)
+    const resultado = await dbProyectos.insertOne(proyecto)
+    //En el resultado tengo el id del proyecto, que posteriormente puedo utilizarlo para buscar
+    console.log(resultado)
+    console.log(proyecto)
 
+    const buscado = await dbProyectos.findOne({nombre: 'LOL'}) 
+    console.log(buscado) */
+
+    const modificado = await dbProyectos.updateOne({id: 1}, {$set: {monto: 300}})
+    console.log(modificado)
 await client.close();
 
 console.log('me desconecte')

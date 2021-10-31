@@ -18,13 +18,9 @@ class Proyecto {
     }
 
     setNombre(nom) {
-        if (nom === "") {
-            throw new Error("El nombre no puede ser vacio")
+        if (nom === "" || !nom) {
+            throw new Error("El nombre no puede ser vacio o nulo")
         }
-        if (nom == null) {
-            throw new Error("El nombre no puede ser nulo")
-        }
-
         this.nombre = nom
     }
 
