@@ -3,6 +3,7 @@ import { crearProyecto } from '../casosDeUso/altaDeProyecto.js'
 import { modificarMonto } from '../casosDeUso/modificarMonto.js'
 import { modificarNombre } from '../casosDeUso/modificarNombre.js'
 import { getDao } from '../daos/DaoFactory.js'
+import fs from 'fs'
 
 const daoProyectos = getDao()
 
@@ -29,9 +30,16 @@ routerProyectos.patch('/:idProyecto', async (req, res) => {
     }
 })
 
-routerProyectos.get('/', async (req, res)=>{
+
+    routerProyectos.get('/', async (req, res)=>{
+
+        const txt = await fs.promises.readFile('./db/proyectos.json', 'utf-8')
+        const proyectos = JSON.parse(txt)
+        res.json(proyectos)
+        /* res.send('hola') */
+        
+    })
     
-    res.send('hola')
-})
+
 
 export { routerProyectos }
