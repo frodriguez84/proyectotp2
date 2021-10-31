@@ -1,9 +1,9 @@
 class Proyecto {
-    constructor(id, nombre, genero, montoRequerido) {
+    constructor(id, nombre, genero, monto) {
         this.id = id;
         this.setNombre(nombre)
         this.setGenero(genero)
-        this.setMontoRequerido(montoRequerido)
+        this.setMontoRequerido(monto)
     }
 
     setGenero(gen) {
@@ -28,8 +28,8 @@ class Proyecto {
         this.nombre = nom
     }
 
-    setMontoRequerido(monto) {
-        this.montoRequerido = monto
+    setMontoRequerido(montoN) {
+        this.monto = montoN
     }
 
     static ultimoId = 0
@@ -40,7 +40,7 @@ class Proyecto {
 }
 
 function fromDTO(dto) {
-    return new Proyecto(dto.id, dto.nombre, dto.genero, dto.montoRequerido)
+    return new Proyecto(dto.id, dto.nombre, dto.genero, dto.monto)
 }
 
 function toDTO(proyecto) {
@@ -48,7 +48,7 @@ function toDTO(proyecto) {
         id: proyecto.id,
         nombre: proyecto.nombre,
         genero: proyecto.genero,
-        montoRequerido: proyecto.montoRequerido
+        monto: proyecto.monto
     }
 }
 

@@ -2,22 +2,7 @@
   {
     "id": 1,
     "nombre": "mario",
-    "genero": "accion"
-  },
-  {
-    "id": 2,
-    "nombre": "doom",
-    "genero": "accion"
-  },
-  {
-    "id": 3,
-    "nombre": "fifa",
-    "genero": "deporte"
-  },
-  {
-    "id": 4,
-    "nombre": "GTA",
-    "genero": "Gore",
-    "montoRequerido": 1564
+    "genero": "accion",
+    "monto": 50
   }
 ]
