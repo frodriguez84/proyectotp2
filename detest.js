@@ -18,10 +18,10 @@ const dbProyectos = client.db("ort_tp2").collection("proyectos");
 
 console.log('me conecte')
 
-/* const proyecto = {
-    'nombre': 'LOL',
-    'genero': 'RPG',
-    'montoRequerido': 2500
+const proyecto = {
+    'nombre': 'Warcraft',
+    'genero': 'Estrategia',
+    'montoRequerido': 9999
 }
 
     const resultado = await dbProyectos.insertOne(proyecto)
@@ -29,11 +29,11 @@ console.log('me conecte')
     console.log(resultado)
     console.log(proyecto)
 
-    const buscado = await dbProyectos.findOne({nombre: 'LOL'}) 
+    /* const buscado = await dbProyectos.findOne({nombre: 'LOL'}) 
     console.log(buscado) */
 
-    const modificado = await dbProyectos.updateOne({id: 1}, {$set: {monto: 300}})
-    console.log(modificado)
+    /* const modificado = await dbProyectos.updateOne({id: 1}, {$set: {monto: 300}})
+    console.log(modificado) */
 await client.close();
 
 console.log('me desconecte')
