@@ -2,6 +2,7 @@ import { Router } from 'express'
 import { crearProyecto } from '../casosDeUso/altaDeProyecto.js'
 import { modificarProyecto } from '../casosDeUso/modificarProyecto.js'
 import { getDao } from '../daos/DaoFactory.js'
+import {enviarCotizacion} from '../casosDeUso/enviarCotizacion.js'
 import fs from 'fs'
 
 const daoProyectos = getDao()
@@ -19,7 +20,8 @@ routerProyectos.post('/', async (req, res) => {
 //AGREGAR LOGICA PARA ENVIO DE COTIZACIONES
 routerProyectos.post('/solicitudes', async(req, res) =>{
     try {
-        await enviarCotizacion()
+        const id = req.body.id
+        await enviarCotizacion(daoProyectos ,id)
         res.sendStatus(201)
     } catch (error) {
         res.json({error: error.message})

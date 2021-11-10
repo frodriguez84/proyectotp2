@@ -1,8 +1,16 @@
 [
   {
     "id": 1,
-    "nombre": "Tetris",
-    "genero": "Aventura",
-    "monto": 1500
+    "nombre": "fifa2020",
+    "genero": "deportes",
+    "monto": 1000,
+    "mail": "alepantuliano@hotmail.com"
+  },
+  {
+    "id": 2,
+    "nombre": "fifa2021",
+    "genero": "deportes",
+    "monto": 1500,
+    "mail": "alepantuliano@hotmail.com"
   }
 ]

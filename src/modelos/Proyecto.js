@@ -41,7 +41,7 @@ class Proyecto {
 }
 
 function fromDTO(dto) {
-    return new Proyecto(dto.id, dto.nombre, dto.genero, dto.monto)
+    return new Proyecto(dto.id, dto.nombre, dto.genero,dto.mail, dto.monto)
 }
 
 function toDTO(proyecto) {
@@ -49,6 +49,7 @@ function toDTO(proyecto) {
         id: proyecto.id,
         nombre: proyecto.nombre,
         genero: proyecto.genero,
+        mail : proyecto.mail,
         monto: proyecto.monto
     }
 }
