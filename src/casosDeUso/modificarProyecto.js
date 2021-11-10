@@ -13,6 +13,8 @@ async function modificarProyecto(daoProyectos, id, campo, nuevoValor) {
         case 'nombre':
             proyecto.setNombre(nuevoValor)
             break
+        case 'mail':
+            proyecto.setMailCreador(nuevoValor)
         default:
             throw new Error(`No existe el campo ${campo} en proyecto`)
     }

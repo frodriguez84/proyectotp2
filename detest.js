@@ -1,6 +1,4 @@
 import { db } from './src/config.js'
-//user: fernando
-//pass: facilito2021
 import { ConnectionReadyEvent, MongoClient } from 'mongodb'
 
 const username = db.username
@@ -21,6 +19,7 @@ console.log('me conecte')
 /* const proyecto = {
     'nombre': 'LOL',
     'genero': 'RPG',
+    'mail': 'fernando.rodriguez84@yahoo.com.ar'
     'montoRequerido': 2500
 }
 
@@ -32,8 +31,8 @@ console.log('me conecte')
     const buscado = await dbProyectos.findOne({nombre: 'LOL'}) 
     console.log(buscado) */
 
-    const modificado = await dbProyectos.updateOne({id: 1}, {$set: {monto: 300}})
-    console.log(modificado)
+    /* const modificado = await dbProyectos.updateOne({id: 1}, {$set: {monto: 300}})
+    console.log(modificado) */
 await client.close();
 
 console.log('me desconecte')

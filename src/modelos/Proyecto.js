@@ -1,8 +1,9 @@
 class Proyecto {
-    constructor(id, nombre, genero, monto) {
+    constructor(id, nombre, genero, mail, monto) {
         this.id = id;
         this.setNombre(nombre)
         this.setGenero(genero)
+        this.setMailCreador(mail)
         this.setMontoRequerido(monto)
     }
 
@@ -22,6 +23,10 @@ class Proyecto {
             throw new Error("El nombre no puede ser vacio o nulo")
         }
         this.nombre = nom
+    }
+
+    setMailCreador(mail){
+        this.mail = mail
     }
 
     setMontoRequerido(montoN) {

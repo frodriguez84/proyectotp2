@@ -5,16 +5,24 @@ import { getDao } from '../daos/DaoFactory.js'
 import fs from 'fs'
 
 const daoProyectos = getDao()
-
 const routerProyectos = Router()
 
 routerProyectos.post('/', async (req, res) => {
     try {
-        const { nombre, genero, monto } = req.body
-        const proyecto = await crearProyecto(daoProyectos, nombre, genero, monto)
+        const { nombre, genero, mail, monto } = req.body
+        const proyecto = await crearProyecto(daoProyectos, nombre, genero, mail, monto)
         res.json(proyecto)
     } catch (error) {
         res.json({ error: "no se pudo crear: " + error.message })
+    }
+})
+//AGREGAR LOGICA PARA ENVIO DE COTIZACIONES
+routerProyectos.post('/solicitudes', async(req, res) =>{
+    try {
+        await enviarCotizacion()
+        res.sendStatus(201)
+    } catch (error) {
+        res.json({error: error.message})
     }
 })
 
