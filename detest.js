@@ -28,7 +28,7 @@ console.log('me conecte')
     console.log(resultado)
     console.log(proyecto)
 
-    const buscado = await dbProyectos.findOne({nombre: 'LOL'}) 
+    /* const buscado = await dbProyectos.findOne({nombre: 'LOL'}) 
     console.log(buscado) */
 
     /* const modificado = await dbProyectos.updateOne({id: 1}, {$set: {monto: 300}})
