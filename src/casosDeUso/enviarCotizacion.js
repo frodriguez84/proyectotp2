@@ -1,4 +1,4 @@
-import { getEnviador } from './envioDeMail.js'
+import { getEnviador } from '../modulos/mailer/FactoryEnviador.js'
 import { consultarCosto } from './consultarCosto.js'
 import { fromDTO} from '../modelos/proyecto.js'
 

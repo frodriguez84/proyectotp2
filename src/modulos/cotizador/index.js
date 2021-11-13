@@ -1,5 +1,5 @@
 import ApiConvertidor from '../cotizador/ApiConvertidor.js'
-import { tipoCotizacion} from '../config.js'
+import { tipoCotizacion } from '../../config.js'
 
 
 let daoCotizaciones 

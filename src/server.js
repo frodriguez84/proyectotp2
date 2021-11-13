@@ -1,6 +1,6 @@
 import express from 'express'
 import { routerProyectos } from './rutas/routerProyectos.js'
-
+import { routerUsuarios } from './rutas/routerUsuarios.js'
 
 function crearServidor() {
 
@@ -9,6 +9,7 @@ function crearServidor() {
     app.use(express.json())
 
     app.use('/api/proyectos', routerProyectos)
+    app.use('/api/usuarios', routerUsuarios)
 
     let server
 

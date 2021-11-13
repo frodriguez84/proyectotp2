@@ -1,4 +1,4 @@
-import { getEnviador } from './FactoryEnviador.js'
+import { getEnviador } from '../modulos/mailer/FactoryEnviador.js'
 
 
 const sendMailer = getEnviador()

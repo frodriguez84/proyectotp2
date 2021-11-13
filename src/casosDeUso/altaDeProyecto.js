@@ -1,5 +1,5 @@
 import Proyecto, { toDTO } from '../modelos/Proyecto.js'
-import { getEnviador } from './envioDeMail.js'
+import { getEnviador } from '../modulos/mailer/FactoryEnviador.js'
 
 const sendMailer = getEnviador()
 

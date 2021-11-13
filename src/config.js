@@ -7,6 +7,8 @@ const db = {
      database: 'proyectos',
 }
 
+export const tipoCotizacion = 'BLUE'
+
 export {
     tipoProyecto,
     db

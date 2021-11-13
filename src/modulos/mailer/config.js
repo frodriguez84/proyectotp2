@@ -8,5 +8,3 @@ export const config = {
     }
 
 }
-
- export const tipoCotizacion = 'BLUE'
