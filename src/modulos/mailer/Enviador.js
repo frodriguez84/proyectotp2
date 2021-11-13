@@ -6,13 +6,14 @@ export default class Enviador {
         this.DESDE = config.auth.user
     }
 
-    async enviar({ destinatario, asunto, contenido }) {
+    async enviar({ destinatario, asunto, contenido, attachments }) {
         const mailOptions = {
             //parametros
             from: this.DESDE,
             to: destinatario,
             subject: asunto,
             text: contenido,
+            attachments: attachments
         }
 
         try {

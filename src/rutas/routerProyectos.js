@@ -4,6 +4,7 @@ import { modificarProyecto } from '../casosDeUso/modificarProyecto.js'
 import { getDao } from '../daos/DaoFactory.js'
 import {enviarCotizacion} from '../casosDeUso/enviarCotizacion.js'
 import fs from 'fs'
+import { enviarCotizacionPDF } from '../casosDeUso/enviarCotizacionPDF.js'
 
 const daoProyectos = getDao()
 const routerProyectos = Router()
@@ -22,6 +23,7 @@ routerProyectos.post('/solicitudes', async(req, res) =>{
     try {
         const id = req.body.id
         await enviarCotizacion(daoProyectos ,id)
+        // await enviarCotizacionPDF(daoProyectos ,id)
         res.sendStatus(201)
     } catch (error) {
         res.json({error: error.message})

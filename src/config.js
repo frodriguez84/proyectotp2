@@ -1,4 +1,4 @@
-const tipoProyecto = 'MEM'
+const tipoProyecto = 'FS'
 
 const db = {
      serverUrl: 'cluster0.v2jbm.mongodb.net',
