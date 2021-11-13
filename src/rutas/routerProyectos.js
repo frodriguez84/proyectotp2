@@ -5,11 +5,12 @@ import { getDao } from '../daos/DaoFactory.js'
 import {enviarCotizacion} from '../casosDeUso/enviarCotizacion.js'
 import fs from 'fs'
 import { enviarCotizacionPDF } from '../casosDeUso/enviarCotizacionPDF.js'
+import { verificarToken } from '../modulos/GeneradorDeToken/generadorToken.js'
 
 const daoProyectos = getDao()
 const routerProyectos = Router()
 
-routerProyectos.post('/', async (req, res) => {
+routerProyectos.post('/', verificarToken, async (req, res) => {
     try {
         const { nombre, genero, mail, monto } = req.body
         const proyecto = await crearProyecto(daoProyectos, nombre, genero, mail, monto)

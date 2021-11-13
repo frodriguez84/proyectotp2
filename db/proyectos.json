@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "nombre": "fifa2020",
-    "genero": "deportes",
-    "monto": 1000,
-    "mail": "alepantuliano@hotmail.com"
+    "nombre": "Mario 3",
+    "genero": "Aventura",
+    "mail": "alepantuliano@hotmail.com",
+    "monto": 123456
   },
   {
     "id": 2,
