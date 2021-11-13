@@ -27,7 +27,7 @@ routerProyectos.post('/solicitudes', async(req, res) =>{
         res.json({error: error.message})
     }
 })
-
+//AGREGAR ACA LO DEL TOKEN
 routerProyectos.patch('/:idProyecto', async (req, res) => {
     const [ [campo, valor] ] = Object.entries(req.body)
 

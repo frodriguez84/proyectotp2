@@ -8,9 +8,9 @@
   },
   {
     "id": 2,
-    "nombre": "fifa2021",
-    "genero": "deportes",
-    "monto": 1500,
+    "nombre": "tetris",
+    "genero": "aventura",
+    "monto": 150,
     "mail": "alepantuliano@hotmail.com"
   }
 ]

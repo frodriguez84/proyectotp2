@@ -8,7 +8,7 @@ async function consultarCosto(proyecto) {
 
     const cotizacion = getCotizacion()
 
-    console.log("Cotizacion:  $" + cotizacion.venta)
+    console.log("Cotizacion:  $ " + cotizacion.venta)
 
     const costo = (proyecto.monto * cotizacion.venta)
 
