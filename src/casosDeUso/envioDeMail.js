@@ -1,5 +1,5 @@
-import Enviador from '../modulos/Enviador.js'
-import { config } from '../modulos/config.js'
+import Enviador from '../modulos/mailer/Enviador.js'
+import { config } from '../modulos/mailer/config.js'
 
 
 const sendMailer = new Enviador(config)
