@@ -6,7 +6,7 @@ import { fromDTO } from '../modelos/proyecto.js'
 const sendMailer = getEnviador()
 
 
-async function enviarCotizacion(daoProyectos , id) {
+async function enviarCotizacion(daoProyectos , id , mail) {
   
     const proyecto = fromDTO(await daoProyectos.buscar(Number(id)))
 
@@ -15,7 +15,7 @@ async function enviarCotizacion(daoProyectos , id) {
     console.log("El costo en pesos es  $" + costo)
 
     await sendMailer.enviar({
-        destinatario: `${proyecto.mail}`,
+        destinatario: `${mail}`,
         asunto: "Cotizacion del proyecto: ",
         contenido: `Muchas gracias! \nLa cotizacion solicitada por el proyecto ${proyecto.nombre}. 
             \nEs igual a: $  ${costo}`

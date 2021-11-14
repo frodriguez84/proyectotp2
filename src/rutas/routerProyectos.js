@@ -23,8 +23,18 @@ routerProyectos.post('/', verificarToken, async (req, res) => {
 routerProyectos.post('/solicitudes', async(req, res) =>{
     try {
         const id = req.body.id
-        await enviarCotizacion(daoProyectos ,id)
-        // await enviarCotizacionPDF(daoProyectos ,id)
+        const mail = req.body.mail
+        await enviarCotizacion(daoProyectos ,id ,mail)
+        res.sendStatus(201)
+    } catch (error) {
+        res.json({error: error.message})
+    }
+})
+
+routerProyectos.post('/solicitudpdf', async(req, res) =>{
+    try {
+        const id = req.body.id
+        await enviarCotizacionPDF(daoProyectos ,id)
         res.sendStatus(201)
     } catch (error) {
         res.json({error: error.message})
